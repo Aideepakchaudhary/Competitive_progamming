@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long
+#define vi vector<int>
+#define pb push_back
+#define MOD 1000000007
+#define ff first
+#define ss second
+#define pi pair<int,int>
+#define pii std::vector<pi>
+#define lcm(a,b)  a*b / (__gcd(a,b))
+#define mp  unordered_map<int,int>
+
+
+void solve() {
+	int p, a, b, c; cin >> p >> a >> b >> c;
+	int wait1 = a - p % a;
+	if (wait1 == a)
+		wait1 = 0;
+
+	int wait2 = b - p % b;
+	if (wait2 == b)
+		wait2 = 0;
+
+	int wait3 = c - p % c;
+	if (wait3 == c)
+		wait3 = 0;
+	// cout << wait1 << " " << ;
+	cout << min(wait1, min(wait3, wait2)) << "\n";
+
+}
+
+int32_t main() {
+#ifndef ONLINE_JUDGE
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+#endif
+
+	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+	int t; cin >> t;
+	while (t--)
+		solve();
+	return 0;
+}
