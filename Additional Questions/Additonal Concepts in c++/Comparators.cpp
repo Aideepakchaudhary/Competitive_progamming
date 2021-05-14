@@ -31,6 +31,8 @@ int32_t main() {
 	for (int i = 0; i < 4; i++) {
 		cin >> c[i].name >> c[i].price >> c[i].mileage;
 	}
+
+	//   Sort by lambda function... [](){...;}
 	sort(c, c + 4, [](Cars & c1, Cars & c2) {
 		if (c1.price == c2.price) {
 			return c1.mileage < c2.mileage;
